@@ -75,6 +75,7 @@ PUTCHAR_PROTOTYPE
   return ch;   
 }
 /* USER CODE END 0 */
+
 /**
   * @brief  The application entry point.
   * @retval int

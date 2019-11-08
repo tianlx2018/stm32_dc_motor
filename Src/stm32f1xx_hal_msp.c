@@ -115,10 +115,10 @@ void HAL_TIM_Encoder_MspInit(TIM_HandleTypeDef* htim_encoder)
     hdma_tim8_ch3_up.Init.Direction = DMA_PERIPH_TO_MEMORY;
     hdma_tim8_ch3_up.Init.PeriphInc = DMA_PINC_DISABLE;
     hdma_tim8_ch3_up.Init.MemInc = DMA_MINC_ENABLE;
-    hdma_tim8_ch3_up.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
-    hdma_tim8_ch3_up.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
+    hdma_tim8_ch3_up.Init.PeriphDataAlignment = DMA_PDATAALIGN_WORD;
+    hdma_tim8_ch3_up.Init.MemDataAlignment = DMA_MDATAALIGN_WORD;
     hdma_tim8_ch3_up.Init.Mode = DMA_NORMAL;
-    hdma_tim8_ch3_up.Init.Priority = DMA_PRIORITY_LOW;
+    hdma_tim8_ch3_up.Init.Priority = DMA_PRIORITY_VERY_HIGH;
     if (HAL_DMA_Init(&hdma_tim8_ch3_up) != HAL_OK)
     {
       Error_Handler();
